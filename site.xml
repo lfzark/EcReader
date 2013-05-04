@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <description name="Ark" url="https://raw.github.com/lfzark/EcReader">
+   <description name="Ark" url="https://raw.github.com/lfzark/EcReader/master/">
      Ark TOol
    </description>
-   <feature url="plugins/ArkTool_1.0.0.201305041052.jar" id="com.just" version="20130503"/>
+   <feature url="feature/ArkTool_1.0.0.201305041052.jar" id="com.arktool" version="20130503"/>
 </site>
