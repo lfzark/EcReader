@@ -1,0 +1,7 @@
+$ENCODE_KEY=GBK
+$NOWLINE_KEY=29
+$PASSWORD_KEY=12345678
+$TXTPATH_KEY=C\:\\test - \u526F\u672C.txt
+$URL_KEY=jdbc\:db2\://127.0.0.1/mydb
+$USERNAME_KEY=Ark
+eclipse.preferences.version=1

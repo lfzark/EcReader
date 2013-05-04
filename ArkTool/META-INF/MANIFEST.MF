@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ArkTool
+Bundle-SymbolicName: ArkTool; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: arktool.Activator
+Bundle-Vendor: Ark
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: arktool.actions,
+ arktool.views,
+ org.jdesktop.application
+Bundle-ClassPath: .,
+ lib/appFramework-1.0.jar,
+ lib/flex-messaging-common.jar,
+ lib/flex-messaging-core.jar,
+ lib/flex-messaging-opt.jar,
+ lib/flex-messaging-proxy.jar,
+ lib/flex-messaging-remoting.jar

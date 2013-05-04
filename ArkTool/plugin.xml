@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+     <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            label="Ark Action Set"
+            visible="true"
+            id="ArkTool.actionSet">
+         <menu
+               label="Ar&amp;k "
+               id="ArkMenu">
+            <separator
+                  name="MainGroup">
+            </separator>
+         </menu>
+         <action
+               label="&amp;EcReader"
+               icon="icons/icon_16.gif"
+               class="arktool.actions.EcReaderAction"
+               tooltip="Ark Tools EcReader"
+               menubarPath="ArkMenu/ArkGroup"
+               toolbarPath="ArkGroup"
+ 			   definitionId="com.ark.ReadCommand"
+               id="arktool.actions.EcReaderAction">
+         </action>
+          <action
+               label="&amp;EcReader"
+               icon="icons/icon_16.gif"
+               class="arktool.actions.HideAction"
+               tooltip="Ark Tools EcReader"
+               toolbarPath="ArkGroup"
+ 			   definitionId="com.ark.ReadCommand"
+               id="arktool.actions.EcReaderAction">
+         </action>
+      </actionSet>
+   </extension>
+<extension
+     point="org.eclipse.ui.perspectives">
+  <perspective
+        name="Ark Perpective"
+        icon="icons/icon_16.gif"
+        class="arktool.actions.MainPerspective"
+        id="arktool.actions.MainAction">
+  </perspective>
+</extension>
+<extension
+      point="org.eclipse.ui.views">
+   <category
+         id="ArkPlugIn"
+         name="Ark">
+   </category>
+   <view
+         category="ArkPlugIn"
+         class="arktool.views.ArkView"
+         icon="icons/icon_16.gif"
+         id="arkplugin.views.ArkView"
+         name="Ark View">
+   </view>
+</extension>
+<extension
+      point="org.eclipse.ui.perspectiveExtensions">
+   <perspectiveExtension
+         targetID="org.eclipse.jdt.ui.JavaPerspective">
+      <view
+            id="arktool.views.ArkView"
+            ratio="0.5"
+            relationship="right"
+            relative="org.eclipse.ui.views.ProblemView">
+      </view>
+   </perspectiveExtension>
+</extension>
+<extension
+      point="org.eclipse.help.contexts">
+   <contexts
+         file="contexts.xml">
+   </contexts>
+</extension>
+
+<extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="org.eclipse.ui.category.window"
+            description="ReadCommandDesc"
+            id="com.ark.ReadCommand"
+            name="ReadCommand">
+      </command>
+   <command
+            categoryId="org.eclipse.ui.category.window"
+            description="HideCommandDesc"
+            id="com.ark.HideCommand"
+            name="HideCommand">
+      </command>
+   </extension>
+ <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.ark.ReadCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M3+Z">
+      </key> 
+      <key
+            commandId="com.ark.HideCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M3+X">
+      </key> 
+   </extension>
+   
+<extension point="org.eclipse.ui.preferencePages">
+	<page 
+	  name="ArkTools"
+	  class="arktool.preferences.RootPreferencePage"
+	  id="arktool.preferences.RootPreferencePage">
+	</page>
+ 
+<page 
+	  name="EcReader"
+	  category="arktool.preferences.RootPreferencePage"
+	  class="arktool.preferences.EcReaderPreferencePage"
+	  id="arktool.preferences.EcReaderPreferencePage">
+	</page>
+</extension>
+
+</plugin>
